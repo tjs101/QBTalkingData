@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/tjs101/QBTalkingData.git", :tag => "#{s.version}" }
 
-  s.public_header_files = "TalkingData/*.h"
+  s.source_files = "TalkingData/*.h"
 
   s.frameworks = "AdSupport", "CoreTelephony", "CoreMotion", "Security", "SystemConfiguration"
 
