@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
 
   s.frameworks = "AdSupport", "CoreTelephony", "CoreMotion", "Security", "SystemConfiguration"
 
-  s.library = "libz", "libc++"
+  s.libraries = "z", "c++"
   s.vendored_libraries = "TalkingData/*.a"
 
   s.requires_arc = true
