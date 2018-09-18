@@ -127,6 +127,12 @@ typedef enum {
 + (void)setLatitude:(double)latitude longitude:(double)longitude;
 #endif
 
+/**
+ *  @method backgroundSessionEnabled
+ *  开启后台使用时长统计，需在SDK初始化之前调用。
+ */
++ (void)backgroundSessionEnabled;
+
 #if TARGET_OS_IOS
 /**
  *  @method	sessionStarted:withChannelId:
@@ -138,6 +144,14 @@ typedef enum {
 #endif
 
 
+#if TARGET_OS_IOS
+/**
+ *	@method	setAntiCheatingEnabled
+ *  是否开启反作弊功能
+ *	@param 	enabled 	默认是开启状态
+ */
++ (void)setAntiCheatingEnabled:(BOOL)enabled;
+#endif
 
 
 #if TARGET_OS_IOS
@@ -269,6 +283,7 @@ typedef enum {
  */
 + (void)onViewShoppingCart:(TalkingDataShoppingCart *)shoppingCart;
 #endif
+
 
 
 
