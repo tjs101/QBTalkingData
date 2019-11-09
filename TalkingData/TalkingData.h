@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 #if TARGET_OS_IOS
 typedef NS_ENUM(NSUInteger, TDAccountType) {
     TDAccountTypeAnonymous      = 0,    // 匿名账户
@@ -102,7 +103,7 @@ typedef enum {
 /**
  *  @method setExceptionReportEnabled
  *  是否捕捉程序崩溃记录（可选）
-    如果需要记录程序崩溃日志，请将值设成YES，并且在初始化后尽早调用
+ *  如果需要记录程序崩溃日志，请将值设成YES，并且在初始化后尽早调用
  *  @param  enable      默认是 NO
  */
 + (void)setExceptionReportEnabled:(BOOL)enable;
@@ -110,11 +111,12 @@ typedef enum {
 /**
  *  @method setSignalReportEnabled
  *  是否捕捉异常信号（可选）
-    如果需要开启异常信号捕捉功能，请将值设成YES，并且在初始化后尽早调用
+ *  如果需要开启异常信号捕捉功能，请将值设成YES，并且在初始化后尽早调用
  *  @param  enable      默认是NO
  */
 + (void)setSignalReportEnabled:(BOOL)enable;
 #endif
+
 
 
 #if TARGET_OS_IOS
@@ -135,7 +137,7 @@ typedef enum {
 
 #if TARGET_OS_IOS
 /**
- *  @method	sessionStarted:withChannelId:
+ *  @method sessionStarted:withChannelId:
  *  初始化统计实例，请在application:didFinishLaunchingWithOptions:方法里调用
  *  @param  appKey      应用的唯一标识，统计后台注册得到
  *  @param  channelId   渠道名，如“app store”（可选）
@@ -146,9 +148,9 @@ typedef enum {
 
 #if TARGET_OS_IOS
 /**
- *	@method	setAntiCheatingEnabled
+ *  @method setAntiCheatingEnabled
  *  是否开启反作弊功能
- *	@param 	enabled 	默认是开启状态
+ *  @param  enabled     默认是开启状态
  */
 + (void)setAntiCheatingEnabled:(BOOL)enabled;
 #endif
@@ -190,14 +192,14 @@ typedef enum {
 + (void)trackEvent:(NSString *)eventId label:(NSString *)eventLabel;
 
 /**
- *  @method	trackEvent:label:parameters
+ *  @method trackEvent:label:parameters
  *  统计带二级参数的自定义事件，单次调用的参数数量不能超过10个
  *  @param  eventId     事件名称（自定义）
  *  @param  eventLabel  事件标签（自定义）
  *  @param  parameters  事件参数 (key只支持NSString, value支持NSString和NSNumber)
  */
-+ (void)trackEvent:(NSString *)eventId 
-             label:(NSString *)eventLabel 
++ (void)trackEvent:(NSString *)eventId
+             label:(NSString *)eventLabel
         parameters:(NSDictionary *)parameters;
 
 /**
@@ -216,7 +218,7 @@ typedef enum {
 + (void)removeGlobalKV:(NSString *)key;
 
 /**
- *  @method	trackPageBegin
+ *  @method trackPageBegin
  *  开始跟踪某一页面（可选），记录页面打开时间
     建议在viewWillAppear或者viewDidAppear方法里调用
  *  @param  pageName    页面名称（自定义）
@@ -249,6 +251,7 @@ typedef enum {
  *  @param  order           订单            类型:TalkingDataOrder
  */
 + (void)onPlaceOrder:(NSString *)accountId order:(TalkingDataOrder *)order;
+
 
 /**
  *  @method onOrderPaySucc  支付

@@ -9,10 +9,10 @@
 Pod::Spec.new do |s|
 
   s.name         = "QBTalkingData"
-  s.version      = "1.0.0.0"
-  s.summary      = "TalkingData统计."
+  s.version      = "1.4.0.40"
+  s.summary      = "Version 4.0.40 2019-11-05 TalkingData统计."
 
-  s.homepage     = "https://github.com/tjs101/QBFramework_IOS"
+  s.homepage     = "https://github.com/tjs101/QBTalkingData"
 
   s.license      = "MIT"
 
