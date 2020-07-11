@@ -76,12 +76,6 @@ typedef NS_ENUM(NSUInteger, TDAccountType) {
 @end
 #endif
 
-// 以下枚举用于WatchApp页面追踪
-typedef enum {
-    TDPageTypeGlance = 1,
-    TDPageTypeNotification = 2,
-    TDPageTypeWatchApp = 3
-} TDPageType;
 
 @interface TalkingData: NSObject
 
@@ -146,15 +140,14 @@ typedef enum {
 #endif
 
 
-#if TARGET_OS_IOS
-/**
- *  @method setAntiCheatingEnabled
- *  是否开启反作弊功能
- *  @param  enabled     默认是开启状态
- */
-+ (void)setAntiCheatingEnabled:(BOOL)enabled;
-#endif
 
+
+/**
+ *  @method setAccountId:
+ *  设置帐户ID
+ *  @param  accountId   账户ID
+ */
++ (void)setAccountId:(NSString *)accountId API_DEPRECATED("", ios(1, 1));
 
 #if TARGET_OS_IOS
 /**
@@ -225,14 +218,6 @@ typedef enum {
  */
 + (void)trackPageBegin:(NSString *)pageName;
 
-/**
- *  @method trackPageBegin:withPageType:
- *  开始跟踪WatchApp某一页面（可选），记录页面打开时间
-    建议在willActivate方法里调用
- *  @param  pageName    页面名称（自定义）
- *  @param  pageType    页面类型（TDPageType枚举类型）
- */
-+ (void)trackPageBegin:(NSString *)pageName withPageType:(TDPageType)pageType;
 
 /**
  *  @method trackPageEnd
