@@ -196,6 +196,19 @@ typedef NS_ENUM(NSUInteger, TDAccountType) {
         parameters:(NSDictionary *)parameters;
 
 /**
+ *  @method trackEvent:label:parameters:value:
+ *  数值事件
+ *  @param  eventId     事件名称（自定义）
+ *  @param  eventLabel  事件标签（自定义）
+ *  @param  parameters  事件参数 (key只支持NSString, value支持NSString和NSNumber)
+ *  @param  eventValue  事件数值（double）
+ */
++ (void)trackEvent:(NSString *)eventId
+             label:(NSString *)eventLabel
+        parameters:(NSDictionary *)parameters
+             value:(double)eventValue;
+
+/**
  *  @method setGlobalKV:value:
  *  添加全局的字段，这里的内容会每次的自定义事都会带着，发到服务器。也就是说如果您的自定义事件中每一条都需要带同样的内容，如用户名称等，就可以添加进去
  *  @param  key         自定义事件的key，如果在之后，创建自定义的时候，有相同的key，则会覆盖，全局的里相同key的内容
