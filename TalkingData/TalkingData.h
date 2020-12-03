@@ -141,7 +141,6 @@ typedef NS_ENUM(NSUInteger, TDAccountType) {
 
 
 
-
 /**
  *  @method setAccountId:
  *  设置帐户ID
@@ -165,7 +164,6 @@ typedef NS_ENUM(NSUInteger, TDAccountType) {
  *  @param  name        账户昵称
  */
 + (void)onLogin:(NSString *)accountId type:(TDAccountType)type name:(NSString *)name;
-
 #endif
 
 /**
@@ -250,7 +248,6 @@ typedef NS_ENUM(NSUInteger, TDAccountType) {
  */
 + (void)onPlaceOrder:(NSString *)accountId order:(TalkingDataOrder *)order;
 
-
 /**
  *  @method onOrderPaySucc  支付
  *  @param  accountId       账户ID          类型:NSString
@@ -284,9 +281,6 @@ typedef NS_ENUM(NSUInteger, TDAccountType) {
  */
 + (void)onViewShoppingCart:(TalkingDataShoppingCart *)shoppingCart;
 #endif
-
-
-
 
 
 
