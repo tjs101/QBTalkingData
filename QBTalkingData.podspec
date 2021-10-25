@@ -9,8 +9,8 @@
 Pod::Spec.new do |s|
 
   s.name         = "QBTalkingData"
-  s.version      = "1.4.0.56"
-  s.summary      = "Version 4.0.56 2020-11-16 TalkingData统计."
+  s.version      = "1.4.0.65"
+  s.summary      = "Version 4.0.65 2021-8-25 TalkingData统计."
 
   s.homepage     = "https://github.com/tjs101/QBTalkingData"
 
